@@ -19,12 +19,12 @@ public class TestRegister extends BaseTest  {
         String nPhoneNumber = "949014586";
         String sSNN = "123";
         String sUserName = UserRandom.generateRandomUser();
-        String sPassword = UserRandom.generateRandomPass();
-        String sConfirmPass = sPassword;
+        String sPassword = "123";
+        String sConfirmPass = "123";
         String sActualUserRegister = "Your account was created successfully. You are now logged in.";
         HomePage homePage = registerPage.setRegister(sFirstName,sLastName,sAddress,sCity,sState,sZip,nPhoneNumber,sSNN,sUserName,sPassword,sConfirmPass);
         String sUserRegister = homePage.getUserRegister();
-        System.out.println(sUserRegister);
+        System.out.println(sPassword);
 
         assertEquals(sUserRegister, sActualUserRegister);
     }

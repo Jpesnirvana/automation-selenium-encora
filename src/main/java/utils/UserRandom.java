@@ -4,6 +4,9 @@ import com.company.seleniumwebdriver.pages.RegisterPage;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class UserRandom {
+    public static final String USERNAME = "JP123";
+    public static final String PASSWORD = "123";
+
     private static final String[] FIRST_NAMES = {
             "Jordhan", "Pool", "Cristina"
     };
@@ -18,10 +21,7 @@ public class UserRandom {
         String username = firstName.toLowerCase() + "." + lastName.toLowerCase() + (int) (Math.random() * 100);
         return username;
     }
-    public static String generateRandomPass() {
-        String password = RandomStringUtils.randomAlphanumeric(10);
-        return password;
-    }
+
 
 }
 

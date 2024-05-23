@@ -2,6 +2,8 @@ package com.company.seleniumwebdriver.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.Urls;
+import utils.UserRandom;
 
 public class LoginPage {
     protected WebDriver driver;
@@ -14,9 +16,9 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    public HomePage login(String sUserNameL, String sPasswordL) {
-        driver.findElement(txtUser).sendKeys(sUserNameL);
-        driver.findElement(txtPass).sendKeys(sPasswordL);
+    public HomePage login() {
+        driver.findElement(txtUser).sendKeys(UserRandom.USERNAME);
+        driver.findElement(txtPass).sendKeys(UserRandom.PASSWORD);
         driver.findElement(btnLogin).click();
         return new HomePage(driver);
     }

@@ -9,10 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestLogin extends BaseTest {
     @Test
     public void login(){
-
-        String sUserNameL = "JP123", sPasswordL = "123";
         String sUserActual = "Welcome JORDHAN EVANGE";
-        HomePage homePage =  loginPage.login(sUserNameL,sPasswordL);
+        HomePage homePage =  loginPage.login();
         String sUserExpected = homePage.getUserLogged();
         assertEquals(sUserExpected,sUserActual);
     }
